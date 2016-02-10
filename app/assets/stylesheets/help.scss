@@ -1,0 +1,21 @@
+.container {
+	overflow: hidden;
+	width: 80%;
+}
+
+.box {
+	white-space: nowrap;
+}
+
+.box item {
+	
+	display: inline-block;
+
+	.image {
+		img {
+			height: 250 px;
+		}
+	}
+
+}
+

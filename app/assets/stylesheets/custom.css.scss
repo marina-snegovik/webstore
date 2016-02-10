@@ -1,0 +1,143 @@
+@import "bootstrap";
+
+html {
+  overflow-y: scroll;
+}
+
+.header {
+	text-align: center;	
+}
+
+.greeting {
+	text-align: center;
+	
+	h3 {
+		color: #696969;
+	}
+	
+}
+
+
+.container {
+	width: 80%;
+	margin: 30px auto;
+	overflow: hidden;
+	text-align: center;
+}
+ 
+ #photo_wall {
+
+ }
+ 
+.item {
+	list-style:none;
+	float: left;
+	font: 10px/1.5 Verdana, Helvetica, Sans-serif;
+	width: 20%;
+	margin: 2% 2% 40px 2%;
+
+	a:link { 
+  color: #696969;
+	}
+	a:visited { 
+ 		color: #696969;
+	}	
+	a:hover { 
+  	color: #FF7373;
+  	text-decoration: none;
+	}
+	a:active {
+	}
+	
+
+	.image {
+		.list_image {
+			
+		}
+	
+	}
+
+	.list_description {
+		.lead { 
+			color: #FF7373;
+		
+		}
+		.description {
+
+		}
+
+	}
+
+	.muted {
+		color: #696969;
+		
+	}
+}
+
+.brand {
+	a:link { 
+		color: #696969;
+	}
+	a:visited { 
+ 		color: #696969;
+	}	
+	a:hover { 
+  	color: #FF7373;
+  	text-decoration: none;
+	}
+}
+
+/* 100% - (5 * 4%) = 80% */
+/* 80%/5 = 16% */
+ 
+ 
+/* 100% - (4 * 4%) = 84% */
+/* 80%/4 = 21% */
+ 
+ 
+/* Media Queries */
+@media only screen and (max-width : 940px),
+only screen and (max-device-width : 940px){ 
+	
+	.container ul li {
+		width: 21%;
+	}
+}
+ 
+
+ 
+/* 100% - (3 * 4%) = 88% */
+/* 88%/3 = 29.33333% */
+ 
+@media only screen and (max-width : 720px),
+only screen and (max-device-width : 720px){ 
+ 
+	.container ul li {
+		width: 29.33333%
+	}
+}
+ 
+ 
+
+ 
+/* 100% - (2 * 4%) = 92% */
+/* 92%/2 = 46% */
+ 
+@media only screen and (max-width : 530px),
+only screen and (max-device-width : 530px){ 
+	.container ul li {
+		width: 46%
+	}
+}
+ 
+ 
+ 
+/* 100% - 4% = 96% */
+/* 96% */
+ 
+@media only screen and (max-width : 320px),
+only screen and (max-device-width : 320px){  
+	.container ul li {
+		width: 96%
+	}
+}

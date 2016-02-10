@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title><%= full_title(yield(:title)) %></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <header class="navbar navbar-fixed-top navbar-inner">
+      <div class="brand"><%= link_to "БИКЕРСКАЯ и куклы", products_path %></div>
+        <ul class="nav pull-left">
+          <li class="divider-vertical"></li>
+          <li><%= link_to "Галерея", gallery_show_path %></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to "О нас", about_show_path %></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to "Помощь", help_show_path %></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to "Контакты", contacts_show_path %></li>
+          <li class="divider-vertical"></li>
+        </ul> 
+    </header>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <%= yield %>
+
+    <footer class="navbar navbar-fixed-bottom navbar-inner"> 
+      <ul class="nav pull-left">
+        <li class="divider-vertical"></li>
+        <li><%= link_to "Войти", "#" %></li>
+        <li class="divider-vertical"></li>
+        <li><%= link_to "Добавить продукт", new_product_path %></li>
+        <li class="divider-vertical"></li>
+      </ul>
+      <ul class="nav pull-right">
+      <li class="divider-vertical"></li>
+      <li><a href="https://vk.com/id106300790"><img src="http://afghanistan.ru/img/vk_logo.png"></a></li>
+      <li class="divider-vertical"></li>
+      <li><a href="#"><img src="http://turbojetcarwash.com/wp-content/themes/DirtyTrike/images/images/fb-logo.png"></a></li>
+      <li class="divider-vertical"></li>
+
+      </ul>
+    </footer>
+
+  </body>
+</html>

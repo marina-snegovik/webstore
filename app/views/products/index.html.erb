@@ -1,0 +1,36 @@
+  <div class="hero-unit">
+  <div class="greeting">
+  <h3 class="text-left">АВТОРСКИЕ ТЕКСТИЛЬНЫЕ КУКЛЫ РУЧНОЙ РАБОТЫ<br><small>ГОТОВЫЕ И НА ЗАКАЗ!</small></h3>
+  </div>
+  <div class="container"> 
+    <section id="photo-wall">
+         <% @products.each do |product| %>
+         <div class="item">
+          <div class="image">
+            <%= image_tag(product.image_url, class: 'list_image') %>
+          </div>
+          <div class="list_description">
+            <div class="lead"><%= product.title %></div> <br>
+            <div class="description"><%= truncate(strip_tags(product.description),
+                    length: 80) %></div><br>
+            </div>
+          <div class="muted">
+            <%= link_to 'Show', product %> |
+            <%= link_to 'Edit', edit_product_path(product) %> |
+            <%= link_to 'Destroy', product, method: :delete, 
+                                            data: { confirm: 'Are you sure?' } %></div>
+          </div>
+          <% end %>     
+    </div> 
+  </div> 
+  <p align="center">
+    <a class="btn btn-primary btn-large" href="/gallery/show">
+      Смотреть больше кукол...
+    </a>
+  </p>
+</div>
+
+<br>
+
+
+

@@ -1,0 +1,93 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gallery</h1>
+
+<div class="gallery">
+<% @products.each do |product| %>
+  <div class="item">
+    <div class="image">
+      <%= image_tag(product.image_url, class: 'list_image') %>
+    </div>
+    <div class="list_description"></div>
+      <div class="title"><%= product.title %></div> <br>
+      <div class="description"><%= truncate(strip_tags(product.description),
+                    length: 80) %></div>
+    <div class="list_action">
+      <%= link_to 'Show', product %> <br>
+      <%= link_to 'Edit', edit_product_path(product) %> <br>
+      <%= link_to 'Destroy', product, method: :delete, 
+                                      data: { confirm: 'Are you sure?' } %>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+
+<br>
+
+<%= link_to 'New product', new_product_path %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Listing products</h1>
+
+<div class="index_menu">
+  <% @products.each do |product| %>
+    <div class="<%= cycle('list_line_odd', 'list_line_even') %>">
+      <div>
+        <%= image_tag(product.image_url, class: 'list_image') %>
+      </div>
+
+      <div class="list_description">
+        <div class="ls">
+          <div class="title"><%= product.title %></div>
+          <div class="description"><%= truncate(strip_tags(product.description),
+                    length: 80) %></div>
+        </div>
+      </div>
+
+      <div class="list_action">
+        <%= link_to 'Show', product %> <br>
+        <%= link_to 'Edit', edit_product_path(product) %> <br>
+        <%= link_to 'Destroy', product, method: :delete, 
+                                        data: { confirm: 'Are you sure?' } %>
+      </div>    
+    </div>
+    <% end %>
+</div>
+
+<br>
+
+
+<%= link_to 'New product', new_product_path %>

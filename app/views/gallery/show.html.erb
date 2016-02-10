@@ -1,0 +1,28 @@
+<% provide(:title, 'Галерея') %>
+<p id="notice"><%= notice %></p>
+
+<div class="container"> 
+    <section id="photo-wall">
+      
+         <% @products.each do |product| %>
+         <div class="item">
+          <div class="image">
+            <%= image_tag(product.image_url, class: 'list_image') %>
+          </div>
+          <div class="list_description">
+            <div class="lead"><%= link_to product.title %></div> <br>
+            <div class="description"><%= truncate(strip_tags(product.description),
+                    length: 80) %></div><br>
+            </div>
+          <div class="muted">
+            <%= link_to 'Show', product %> |
+            <%= link_to 'Edit', edit_product_path(product) %> |
+            <%= link_to 'Destroy', product, method: :delete, 
+                                            data: { confirm: 'Are you sure?' } %></div>
+          </div>
+          <% end %>
+        
+    </section> 
+  </div> 
+
+<br>
